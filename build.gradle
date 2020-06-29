@@ -1,0 +1,25 @@
+plugins {
+    id 'groovy'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+}
+
+repositories {
+    mavenCentral()
+}
+
+allprojects {
+    project.group = 'me.wedrowicz.architecture-cheatsheet'
+    project.version = '1.0-SNAPSHOT'
+
+    project.ext.versions = [
+            'groovy': '2.5.12',
+            'spock' : '1.3-groovy-2.5'
+    ]
+
+    compileKotlin {
+        kotlinOptions.jvmTarget = "1.11"
+    }
+    compileTestKotlin {
+        kotlinOptions.jvmTarget = "1.11"
+    }
+}

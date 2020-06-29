@@ -1,0 +1,14 @@
+plugins {
+    id 'groovy'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testImplementation "org.codehaus.groovy:groovy-all:${versions.groovy}"
+    testImplementation "org.spockframework:spock-core:${versions.spock}"
+}
